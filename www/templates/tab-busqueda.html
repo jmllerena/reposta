@@ -1,0 +1,17 @@
+<ion-view view-title="Búsqueda">
+  <ion-content padding="true">
+    <div class="list">
+
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Provincia
+        </div>
+        <select
+          ng-model="correctlySelected" ng-options="opt as opt.nombre_provincia for opt in provincias track by opt.id_provincia"
+          ng-change="loadCiudades()">
+        </select>
+      </label>
+
+    </div>
+  </ion-content>
+</ion-view>
