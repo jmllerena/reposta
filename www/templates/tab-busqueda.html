@@ -4,14 +4,29 @@
 
       <label class="item item-input item-select">
         <div class="input-label">
+          Combustible
+        </div>
+        <select
+          ng-model="combustible" ng-options="opt as opt.nombre for opt in combustibles track by opt.id">
+        </select>
+      </label>
+      
+      <label class="item item-input item-select">
+        <div class="input-label">
           Provincia
         </div>
         <select
-          ng-model="correctlySelected" ng-options="opt as opt.nombre_provincia for opt in provincias track by opt.id_provincia"
-          ng-change="loadCiudades()">
+          ng-model="provincia" ng-options="opt as opt.nombre_provincia for opt in provincias track by opt.id_provincia"
+          ng-change="loadCiudades(provincia.id_provincia)">
         </select>
       </label>
-
+      
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Municipio
+        </div>
+        <select ng-model="municipio" ng-options="opt as opt for opt in municipios"></select>
+      </label>
     </div>
   </ion-content>
 </ion-view>
